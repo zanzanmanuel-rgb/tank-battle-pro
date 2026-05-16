@@ -1,7 +1,8 @@
-﻿const { createServer } = require('http');
-const app = require('./app');
-const { setupSocketIO } = require('./socket');
-const { logger } = require('./lib/logger');
+const { createServer } = require('http');
+const app = require('./app.js');
+const { setupSocketIO } = require('./socket.js');
+const { logger } = require('./logger.js'); // ← Corregido: le quitamos el ./lib/
+
 
 const port = Number(process.env.PORT) || 8080;
 const httpServer = createServer(app);
